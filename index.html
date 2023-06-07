@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Boulder Shark</title>
+</head>
+<html>
+<body>
+    <div class="nom_jeu"></div>
+    <div>
+        <div class="backmenu" id="backmenu"><input type="button" class="backmenubutton" id="backmenubutton" value="Retournez au menu" 
+            onClick="var result = confirm('Etes-vous sûr de vouloir retourner au menu?');
+            if (result) {
+                window.location.href = 'index.html';
+            }"
+        ></div>
+        <div class="hautpage">
+       <button id="jouer" class="jouer">Jouer</button>
+       <button id="reprendreGame" class="reprendreGame">Reprendre une partie</button>
+        </div>
+        <div id="importfile" class="importfile">
+        <input type="file">
+        </div>
+        <div class="boutonNiveaux" id="boutonNiveaux">
+       <button id="niveau1" class="niveau1">Niveau 1</button>
+       <button id="niveau2" class="niveau2">Niveau 2</button>
+       <button id="niveau3" class="niveau3">Niveau 3</button>
+       </div>
+        </div>
+       
+       <div id="infogamediams" class="nbrediamants">Nageurs mangés : <div id="diamants"></div><div>/</div><div id="diamstot"></div></div>
+       <div id="infogamedeplacement" class="nbredeplacement">Nombre de déplacement :  <div id="deplacement"></div></div>
+       <div id="game"> <jeu></jeu></div>
+    </div>
+    <button class="regle" id="regle"></button>
+    <div class="reglediv" id="reglediv">Le but du jeu est simple, <br>manger les nageurs avec le requin mais attention à ne pas vous faire écraser par des rochers! Vous pouvez passer à travers les algues et pousser les rochers de manière horizontale. Les rochers vous tombent dessus lorsque il y a du vide entre eux et vous.<br><br>Have fun !</div>
+    <div class="loose" id="loose">GAME OVER</div>
+    <div class="win" id="win">VICTOIRE</div>
+    <script type = "module" src="js/map.js"></script>
+    <script type = "module" src="js/loadfile.js"></script>
+   
+</body>
+</html>
+

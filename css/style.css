@@ -1,0 +1,275 @@
+body{
+    margin : 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./../image/menuprincipal.gif");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: rgb(146,194,210);
+}
+/*Concerne le bouton "?" qui permet d'obtenir les informations sur le jeu*/
+.regle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 130px;
+    margin-top: 35px;
+    background-image: url("./../image/regle.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: rgb(146,194,210);
+    background-size: 100%;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+.regle:hover{
+    cursor: pointer;
+}
+
+.reglediv{
+    display: none;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    height: 230px;
+    background-color: rgb(102, 163, 184);;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 100px;
+    margin-right: 20px;
+    border-radius: 50px;
+    border: #000 solid 3px;
+    
+    
+
+}
+
+/*Titre Boulder Dash*/
+.nom_jeu{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-image: url("./../image/nom_jeu.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 600px;
+    height: 80px;
+}
+/*Gère les 3 inputs*/
+.hautpage{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+.boutonNiveaux{
+    display: none;
+    margin-top: 10px;
+    justify-content: center;
+    color: white;
+}
+.backmenu{
+    display: none;
+    margin-top: 10px;
+    justify-content: center;
+}
+.recommencer{
+    display: none;
+    justify-content: center;
+}
+/*affichage de l'import*/
+.importfile{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+/*affichage des boutons*/
+.niveau1, .niveau2,.niveau3, .jouer{
+    border-radius: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 1.0rem;
+    font-family: arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: rgb(0, 0, 0);
+    z-index: 0;
+    border: 1px solid rgb(146, 194, 210);
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .niveau1::before, .niveau2::before, .niveau3::before, .jouer::before, .reprendreGame::before{
+      content: '';
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #92c2d2;
+      border-radius: 50% 50% 0% 0%;
+      z-index: -1;
+      transition: all .7s;
+  }
+  
+  .niveau1:hover::before, .niveau2:hover::before, .niveau3:hover::before, .jouer:hover::before, .reprendreGame:hover::before{
+      top:0px;
+      border-radius:0 ;
+  }
+
+  .reprendreGame{
+    border-radius: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 1.0rem;
+    font-family: arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: rgb(0, 0, 0);
+    z-index: 0;
+    border: 1px solid rgb(146, 194, 210);
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/*Affiche le nombre de dimants total et le nombre de diamants restant*/
+/*Affiche le nombre de deplacement*/
+.nbrediamants, .nbredeplacement{
+    display: none;
+    flex-direction: row;
+    margin-bottom: 5px;
+    color: white;
+    justify-content: center;
+}
+
+/*Gère l'affichage des div correspondantes aux murs, diamants, etc..*/
+jeu > div{
+    display: flex;
+    background-color: rgb(66, 170, 240);
+}
+
+.vide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid #000;
+    font-size: 70px;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    
+}
+
+.diamant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 70px;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    background-size: 100%;
+    background-image:url('./../image/nageur.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: blue;
+}
+
+.terre{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px solid #000;
+    font-size: 70px;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    background-size: 100%;
+    background-image:url('./../image/algue.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.mur{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border: 1px solid #000;
+    font-size: 70px;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    background-size: 100%;
+    background-image:url('./../image/bouee.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.rocher{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border: 1px solid #000;
+    font-size: 70px;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    background-size: 100%;
+    background-image:url('./../image/rocher.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.placement_joueur{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border: 1px solid #000;
+    font-size: 70px;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    background-size: 100%;
+    background-image:url('./../image/requin.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.placement_joueur, .rocher, .mur, .vide, .terre,.diamant{
+    height: 29px;
+    width: 29px;
+}
+
+/*Affiche quand on perd ou quand on gagne*/
+.loose{
+    position: absolute;
+    bottom: 43%;
+    display: none;
+    font-size: 200px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.win{
+    position: absolute;
+    bottom: 43%;
+    display: none;
+    font-size: 200px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
